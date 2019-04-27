@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import java.text.DateFormat;
+import java.util.Calendar;
 
 import static au.edu.utas.auvde.assignment2.R.*;
 
@@ -22,6 +26,17 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(MainActivity.this,TimeLine.class);
                 startActivity(i);
             }
+
+
         });
+
+        Calendar calendar = Calendar.getInstance();
+        String currentDate = DateFormat.getDateInstance().format(calendar.getTime());
+
+        TextView textView = (TextView) findViewById(id.date_time);
+
+
+        TextView textViewDate = findViewById(R.id.date_time);
+        textViewDate.setText(currentDate);
     }
 }
