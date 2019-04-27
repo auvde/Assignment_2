@@ -6,20 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import static au.edu.utas.auvde.assignment2.R.*;
-
-public class MainActivity extends AppCompatActivity {
+public class Graph extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.activity_main);
+        setContentView(R.layout.activity_graph);
 
-        Button locationPageButton = (Button) findViewById(id.btnLogtimeline);
-        locationPageButton.setOnClickListener(new View.OnClickListener() {
+        final Button timeline = (Button) findViewById(R.id.btnTimeline_G);
+        timeline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,TimeLine.class);
+                Intent i = new Intent(Graph.this, TimeLine.class);
                 startActivity(i);
             }
         });
