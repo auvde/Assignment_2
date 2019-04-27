@@ -32,11 +32,16 @@ public class MainActivity extends AppCompatActivity {
 
         Calendar calendar = Calendar.getInstance();
         String currentDate = DateFormat.getDateInstance().format(calendar.getTime());
+      ///  String time = "Current Time;" + format.format(calendar.getTime());
 
-        TextView textView = (TextView) findViewById(id.date_time);
 
 
-        TextView textViewDate = findViewById(R.id.date_time);
+        TextView textView = (TextView) findViewById(id.txtdate);
+      //  TextView textshow = (TextView) findViewById(id.time);
+
+        TextView textViewDate = findViewById(R.id.txtdate);
         textViewDate.setText(currentDate);
+
+
     }
 }
